@@ -1,0 +1,4 @@
+#!bin/bash
+
+ls -tmp | tr -d " "
+
