@@ -1,3 +1,6 @@
 #! bin/bash
 
-find .-type f -name '*.sh' -exec basename {} \; | sed 's/\.sh$//'
+for file in *.sh
+do
+	echo "$file" | sed 's/\.sh$//'
+done
