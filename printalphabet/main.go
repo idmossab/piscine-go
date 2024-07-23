@@ -5,7 +5,7 @@ import (
 )
 
 func main (){
-	for i:='a' ; i<='z';i++{
+	for i := 'a' ; i <= 'z' ; i++{
 		z01.PrintRune(rune(i))
 	}
 }
