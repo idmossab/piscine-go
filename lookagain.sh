@@ -1,6 +1,3 @@
 #! bin/bash
 
-for file in *.sh
-do
-	echo "$file" | sed 's/\.sh$//' |  sort -r
-done
+find . -type f -name '*.sh' -exec basename {} \; | sed 's/\.sh$//'
