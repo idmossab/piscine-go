@@ -11,13 +11,17 @@ func PrintNbr(n int) {
 		z01.PrintRune('0')
 	}
 
-	res := ""
+	//res := ""
+	table :=[20]int{}
+	i:=0
 
 	for n > 0 {
-		res += string(n % 10)
+		//res += string(n % 10)
+		table[i] = n%10
 		n = n / 10
+		i++
 	}
-	for i := len(res) - 1; i >= 0; i-- {
-		z01.PrintRune(rune(res[i] + '0'))
+	for j := i - 1; j >= 0; j-- {
+		z01.PrintRune(rune(table[j] +'0'))
 	}
 }
