@@ -15,17 +15,16 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	str1 := "x = "
+	str1 := "x = a, y = b\n"
 	for _, r := range str1 {
-		z01.PrintRune(r)
+		if r == 'a' {
+			PrtPoint(points.x)
+		} else if r == 'b' {
+			PrtPoint(points.y)
+		} else {
+			z01.PrintRune(r)
+		}
 	}
-	PrtPoint(points.x)
-	str2 := ", y = "
-	for _, r1 := range str2 {
-		z01.PrintRune(r1)
-	}
-	PrtPoint(points.y)
-	z01.PrintRune('\n')
 }
 
 func check(nb int) {
