@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"os"
 )
 
@@ -19,10 +19,18 @@ func main() {
 	}
 	fileName := arg[0]
 
-	content, err := ioutil.ReadFile(fileName)
+	file, err := os.Open(fileName)
 	if err != nil {
 		fmt.Println()
 		return
 	}
+	defer file.Close()
+
+	content, err := io.ReadAll(file)
+	if err != nil {
+		fmt.Println()
+		return
+	}
+	defer file.Close()
 	fmt.Println(string(content))
 }
