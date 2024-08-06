@@ -32,5 +32,5 @@ func main() {
 		return
 	}
 	defer file.Close()
-	fmt.Println(string(content))
+	fmt.Print(string(content))
 }
