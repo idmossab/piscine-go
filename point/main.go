@@ -22,14 +22,14 @@ func main() {
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
-	IntoRune(points.x)
+	PrtPoint(points.x)
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
 	z01.PrintRune('y')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
-	IntoRune(points.y)
+	PrtPoint(points.y)
 	z01.PrintRune('\n')
 }
 
@@ -52,7 +52,7 @@ func check(nb int) {
 	z01.PrintRune(c)
 }
 
-func IntoRune(n int) {
+func PrtPoint(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
 	}
