@@ -7,7 +7,7 @@ import (
 func PrintNbr(n int) {
 	if n == -9223372036854775808 {
 		z01.PrintRune('-')
-		PrintNbr(922337203685477580)
+		PrintNbr(9223372036854775808 / 10)
 		z01.PrintRune('8')
 		return
 	}
