@@ -5,6 +5,12 @@ import (
 )
 
 func PrintNbr(n int) {
+	if n == -9223372036854775808 {
+		z01.PrintRune('-')
+		PrintNbr(922337203685477580)
+		z01.PrintRune('8')
+		return
+	}
 	if n == 0 {
 		z01.PrintRune('0')
 		return
