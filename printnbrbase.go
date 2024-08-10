@@ -12,7 +12,7 @@ func PrintNbrBase(nbr int, base string) {
 	if nbr < 0 {
 		z01.PrintRune('-')
 		ConvertNbr(nbr/(-len(base)), base)
-		z01.PrintRune(rune(base[-nbr%len(base)]))
+		z01.PrintRune(rune(base[-(nbr % len(base))]))
 	} else {
 		ConvertNbr(nbr, base)
 	}
