@@ -15,5 +15,8 @@ func ListSize(l *List) int {
   for i:=l.Head ;i!=l.Tail;i=i.Next{
     size++
   }
+  if l.Tail!=nil{
+    size++
+  }
   return size
 }
